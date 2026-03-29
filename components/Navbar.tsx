@@ -50,7 +50,9 @@ export function Navbar() {
         </div>
 
         <div className="flex items-center gap-2">
-          <InstallButton size="sm" />
+          <div className="hidden md:block">
+            <InstallButton size="sm" />
+          </div>
 
           {/* Mobile hamburger */}
           <Sheet>
@@ -92,9 +94,6 @@ export function Navbar() {
                   </SheetClose>
                 ))}
               </nav>
-              <div className="px-4 pt-4">
-                <InstallButton size="sm" className="w-full justify-center" />
-              </div>
             </SheetContent>
           </Sheet>
         </div>
