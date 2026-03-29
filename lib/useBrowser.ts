@@ -3,12 +3,23 @@ import { useEffect, useState } from "react";
 
 export type BrowserName = "chrome" | "brave" | "other";
 
+function isMobileDevice(): boolean {
+  if (typeof navigator === "undefined") return false;
+  return /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+}
+
 export function useBrowser(): BrowserName | null {
-  const [browser, setBrowser] = useState<BrowserName | null>(null);
+  const [browser, setBrowser] = useState<BrowserName | null>(() => {
+    // Mobile: return "chrome" synchronously — no detection needed, no skeleton.
+    // Desktop: return null so the skeleton shows while async detection runs.
+    return isMobileDevice() ? "chrome" : null;
+  });
 
   useEffect(() => {
+    // Mobile already resolved synchronously above — skip detection entirely.
+    if (isMobileDevice()) return;
+
     const detect = async (): Promise<BrowserName> => {
-      if (typeof navigator === "undefined") return "other";
       if (!navigator.userAgent.includes("Chrome/")) return "other";
 
       const nav = navigator as Navigator & {
@@ -23,7 +34,7 @@ export function useBrowser(): BrowserName | null {
       }
     };
 
-    detect().then(setBrowser);
+    detect().then(setBrowser).catch(() => setBrowser("other"));
   }, []);
 
   return browser;

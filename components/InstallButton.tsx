@@ -3,6 +3,7 @@ import { useBrowser } from "@/lib/useBrowser";
 import { Button } from "@/components/ui/button";
 import BraveIcon from "./icons/Brave";
 import ChromeIcon from "./icons/Chrome";
+import { Download } from "lucide-react";
 import type { ReactNode } from "react";
 
 interface Props {
@@ -34,7 +35,7 @@ const BROWSER_META: Record<string, BrowserMeta> = {
   },
   other: {
     label: "Add to Browser",
-    icon: <ChromeIcon width={16} height={16} />,
+    icon: <Download size={16} />,
     bg: "bg-[#1a1a18]",
     hover: "hover:bg-[#2d2d2b]",
   },
@@ -48,8 +49,6 @@ export function InstallButton({ size = "lg", className = "" }: Props) {
       ? "px-4 py-1.5 h-auto text-[13px] rounded-lg"
       : "px-6 py-3 h-auto text-[14px] rounded-xl";
 
-  // Skeleton: matches the real button's exact padding/radius so there is
-  // zero layout shift when the real button appears.
   if (!browser) {
     return (
       <div
