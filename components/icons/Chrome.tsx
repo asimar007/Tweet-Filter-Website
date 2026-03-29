@@ -1,3 +1,6 @@
+"use client";
+import { useId } from "react";
+
 interface Props {
   width?: number;
   height?: number;
@@ -5,6 +8,8 @@ interface Props {
 }
 
 export default function ChromeIcon({ width = 16, height = 16, className }: Props) {
+  const id = useId();
+
   return (
     <svg
       viewBox="0 0 128 128"
@@ -20,7 +25,7 @@ export default function ChromeIcon({ width = 16, height = 16, className }: Props
       />
       <circle fillOpacity=".1" cx="66.922" cy="71.999" r="21.072" />
       <linearGradient
-        id="chrome-gradient-a"
+        id={`${id}-a`}
         gradientUnits="userSpaceOnUse"
         x1="395.191"
         y1="484.168"
@@ -31,9 +36,9 @@ export default function ChromeIcon({ width = 16, height = 16, className }: Props
         <stop offset="0" stopColor="#81B4E0" />
         <stop offset="1" stopColor="#0C5A94" />
       </linearGradient>
-      <circle fill="url(#chrome-gradient-a)" cx="64.149" cy="64.235" r="22.736" />
+      <circle fill={`url(#${id}-a)`} cx="64.149" cy="64.235" r="22.736" />
       <linearGradient
-        id="chrome-gradient-b"
+        id={`${id}-b`}
         gradientUnits="userSpaceOnUse"
         x1="-608.91"
         y1="-597.648"
@@ -45,11 +50,11 @@ export default function ChromeIcon({ width = 16, height = 16, className }: Props
         <stop offset="1" stopColor="#DF2227" />
       </linearGradient>
       <path
-        fill="url(#chrome-gradient-b)"
+        fill={`url(#${id}-b)`}
         d="M119.602 36.508C104.336 5.792 67.06-6.732 36.343 8.534A62.105 62.105 0 0012.578 29.3l24.955 43.253c-4.597-14.606 3.521-30.174 18.127-34.77a27.676 27.676 0 017.935-1.274"
       />
       <linearGradient
-        id="chrome-gradient-c"
+        id={`${id}-c`}
         gradientUnits="userSpaceOnUse"
         x1="-657.835"
         y1="-491.393"
@@ -61,11 +66,11 @@ export default function ChromeIcon({ width = 16, height = 16, className }: Props
         <stop offset="1" stopColor="#4CB749" />
       </linearGradient>
       <path
-        fill="url(#chrome-gradient-c)"
+        fill={`url(#${id}-c)`}
         d="M12.578 29.3c-19.1 28.492-11.486 67.071 17.005 86.171a62.133 62.133 0 0029.575 10.319l26.063-44.363c-9.745 11.811-27.22 13.486-39.032 3.74a27.717 27.717 0 01-8.657-12.613"
       />
       <linearGradient
-        id="chrome-gradient-d"
+        id={`${id}-d`}
         gradientUnits="userSpaceOnUse"
         x1="-572.385"
         y1="-486.91"
@@ -77,11 +82,11 @@ export default function ChromeIcon({ width = 16, height = 16, className }: Props
         <stop offset=".3" stopColor="#FCD209" />
       </linearGradient>
       <path
-        fill="url(#chrome-gradient-d)"
+        fill={`url(#${id}-d)`}
         d="M59.158 125.791c34.204 2.585 64.027-23.047 66.613-57.25a62.097 62.097 0 00-6.17-32.031H63.595c15.312.07 27.67 12.541 27.598 27.854a27.725 27.725 0 01-5.972 17.064"
       />
       <linearGradient
-        id="chrome-gradient-e"
+        id={`${id}-e`}
         gradientUnits="userSpaceOnUse"
         x1="-649.391"
         y1="-528.885"
@@ -94,11 +99,11 @@ export default function ChromeIcon({ width = 16, height = 16, className }: Props
         <stop offset="1" stopOpacity=".03" />
       </linearGradient>
       <path
-        fill="url(#chrome-gradient-e)"
+        fill={`url(#${id}-e)`}
         d="M12.578 29.3l24.955 43.253a27.725 27.725 0 011.107-18.854L13.686 27.636"
       />
       <linearGradient
-        id="chrome-gradient-f"
+        id={`${id}-f`}
         gradientUnits="userSpaceOnUse"
         x1="-588.158"
         y1="-514.559"
@@ -111,11 +116,11 @@ export default function ChromeIcon({ width = 16, height = 16, className }: Props
         <stop offset="1" stopOpacity=".03" />
       </linearGradient>
       <path
-        fill="url(#chrome-gradient-f)"
+        fill={`url(#${id}-f)`}
         d="M59.158 125.791l26.063-44.363a27.731 27.731 0 01-16.082 9.426l-11.091 34.937"
       />
       <linearGradient
-        id="chrome-gradient-g"
+        id={`${id}-g`}
         gradientUnits="userSpaceOnUse"
         x1="-588.6"
         y1="-505.621"
@@ -128,8 +133,8 @@ export default function ChromeIcon({ width = 16, height = 16, className }: Props
         <stop offset="1" stopOpacity=".03" />
       </linearGradient>
       <path
-        fill="url(#chrome-gradient-g)"
-        d="M119.602 36.508H63.595a27.727 27.727 0 0121.626 10.537l35.491-8.873"
+        fill={`url(#${id}-g)`}
+        d="M119.602 36.508H63.595a27.727 10.537l35.491-8.873"
       />
     </svg>
   );
