@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-// Link is used for the logo; nav items use scrollTo() for smooth scroll
 import { Menu } from "lucide-react";
 import { InstallButton } from "./InstallButton";
 import { Button } from "@/components/ui/button";
@@ -23,30 +22,23 @@ function scrollTo(id: string) {
 export function Navbar() {
   return (
     <header className="fixed top-0 inset-x-0 z-50">
-      {/* Glass bar */}
       <div className="bg-white/70 backdrop-blur-xl border-b border-[#e5e5e0]/80 shadow-sm shadow-black/[0.03]">
         <nav className="max-w-5xl mx-auto px-6 h-15 flex items-center justify-between gap-6">
 
           {/* Logo */}
-          <Link
-            href="/"
-            className="flex items-center gap-2.5 group shrink-0"
-          >
-            <div className="w-7 h-7 rounded-lg overflow-hidden shrink-0 shadow-sm">
-              <Image
-                src="/icon.png"
-                alt="ZenX"
-                width={28}
-                height={28}
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <span className="font-semibold text-[15px] tracking-tight text-[#1a1a18] group-hover:text-black transition-colors">
-              Zen<span className="text-[#6b7280]">X</span>
-            </span>
+          <Link href="/" className="group shrink-0 flex items-center">
+            <Image
+              src="/ZenX.png"
+              alt="ZenX"
+              width={80}
+              height={32}
+              className="h-11 w-auto object-contain group-hover:opacity-80 transition-opacity"
+              style={{ width: "auto" }}
+              priority
+            />
           </Link>
 
-          {/* Desktop nav links — centered */}
+          {/* Desktop nav links */}
           <div className="hidden md:flex items-center gap-1 flex-1 justify-center">
             {NAV_LINKS.map((item) => (
               <button
@@ -80,19 +72,15 @@ export function Navbar() {
 
               <SheetContent side="right" className="w-72 bg-white p-0">
                 <SheetHeader className="px-5 py-4 border-b border-[#e5e5e0]">
-                  <SheetTitle className="flex items-center gap-2.5">
-                    <div className="w-7 h-7 rounded-lg overflow-hidden shrink-0 shadow-sm">
-                      <Image
-                        src="/icon.png"
-                        alt="ZenX"
-                        width={28}
-                        height={28}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <span className="font-semibold text-[15px] tracking-tight text-[#1a1a18]">
-                      Zen<span className="text-[#6b7280]">X</span>
-                    </span>
+                  <SheetTitle>
+                    <Image
+                      src="/ZenX.png"
+                      alt="ZenX"
+                      width={80}
+                      height={32}
+                      className="h-9 w-auto object-contain"
+                      style={{ width: "auto" }}
+                    />
                   </SheetTitle>
                 </SheetHeader>
 
@@ -100,7 +88,9 @@ export function Navbar() {
                   {NAV_LINKS.map((item) => (
                     <SheetClose asChild key={item}>
                       <button
-                        onClick={() => scrollTo(item.toLowerCase().replace(/ /g, "-"))}
+                        onClick={() =>
+                          scrollTo(item.toLowerCase().replace(/ /g, "-"))
+                        }
                         className="flex items-center text-[14px] text-[#6b7280] hover:text-[#1a1a18] hover:bg-[#f3f3f0] px-3 py-2.5 rounded-lg transition-colors cursor-pointer"
                       >
                         {item}

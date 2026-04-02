@@ -14,9 +14,7 @@ export function Footer() {
             className="shrink-0"
             style={{ width: 32, height: 32 }}
           />
-          <span className="text-[13px] font-semibold tracking-tight">
-            ZenX
-          </span>
+          <span className="text-[13px] font-semibold tracking-tight">ZenX</span>
           <span className="text-[12px] text-[#9ca3af] ml-2">
             © {new Date().getFullYear()} · Made for a calmer internet
           </span>
@@ -26,7 +24,7 @@ export function Footer() {
           {[
             {
               label: "GitHub",
-              href: "https://github.com/asimar007/ZenX",
+              href: "https://github.com/asimar007/Tweet-Filter",
             },
             { label: "Privacy", href: "#" },
             { label: "Chrome Store", href: "#" },
