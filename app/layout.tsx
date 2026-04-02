@@ -13,7 +13,7 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "Tweet Filter — Filter out the noise on Twitter",
+  title: "ZenX — Filter out the noise on Twitter",
   description:
     "Automatically hides political arguments, hate speech, war news, and controversy from your X/Twitter feed.",
 };

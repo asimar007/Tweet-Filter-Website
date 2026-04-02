@@ -8,14 +8,14 @@ export function Footer() {
         <div className="flex items-center gap-2">
           <Image
             src="/icon.png"
-            alt="FeedClear"
+            alt="ZenX"
             width={32}
             height={32}
             className="shrink-0"
             style={{ width: 32, height: 32 }}
           />
           <span className="text-[13px] font-semibold tracking-tight">
-            Tweet Filter
+            ZenX
           </span>
           <span className="text-[12px] text-[#9ca3af] ml-2">
             © {new Date().getFullYear()} · Made for a calmer internet
@@ -26,7 +26,7 @@ export function Footer() {
           {[
             {
               label: "GitHub",
-              href: "https://github.com/asimar007/Tweet-Filter",
+              href: "https://github.com/asimar007/ZenX",
             },
             { label: "Privacy", href: "#" },
             { label: "Chrome Store", href: "#" },

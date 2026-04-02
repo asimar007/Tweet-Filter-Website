@@ -22,7 +22,7 @@ export function Navbar() {
         <Link href="/" className="flex items-center gap-2 group">
           <Image
             src="/icon.png"
-            alt="Tweet Filter"
+            alt="ZenX"
             width={32}
             height={32}
             className="shrink-0"
@@ -32,7 +32,7 @@ export function Navbar() {
             className="font-semibold text-[15px] tracking-tight text-[#1a1a18]"
             style={{ fontFamily: "'Geist', sans-serif" }}
           >
-            Tweet Filter
+            ZenX
           </span>
         </Link>
 
@@ -71,14 +71,14 @@ export function Navbar() {
                 <SheetTitle className="flex items-center gap-2 text-[15px] font-semibold text-[#1a1a18]">
                   <Image
                     src="/icon.png"
-                    alt="FeedClear"
+                    alt="ZenX"
                     width={28}
                     height={28}
                     className="shrink-0"
                     style={{ width: 28, height: 28 }}
                   />
                   <span style={{ fontFamily: "'Geist', sans-serif" }}>
-                    FeedClear
+                    ZenX
                   </span>
                 </SheetTitle>
               </SheetHeader>

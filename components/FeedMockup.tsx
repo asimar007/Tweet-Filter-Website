@@ -89,7 +89,7 @@ export function FeedMockup() {
             <div className="flex-1 bg-white border border-[#e5e5e0] rounded-md px-3 py-1 text-[11px] text-[#9ca3af] flex items-center justify-between">
               <span>x.com/home</span>
               <span className="text-emerald-500 text-[10px] font-medium">
-                🛡️ FeedClear active
+                🛡️ ZenX active
               </span>
             </div>
           </div>
@@ -118,7 +118,7 @@ export function FeedMockup() {
                     </div>
                     <div>
                       <p className="text-[12px] text-[#9ca3af]">
-                        Tweet hidden by FeedClear
+                        Tweet hidden by ZenX
                       </p>
                       <span className="inline-block mt-0.5 text-[10px] px-1.5 py-0.5 rounded bg-[#f3f3f0] text-[#9ca3af] border border-[#e5e5e0]">
                         {tweet.category} · &quot;{tweet.keyword}&quot;

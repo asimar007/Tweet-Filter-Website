@@ -7,7 +7,7 @@ const STEPS = [
   {
     n: "02",
     title: "Choose your filters",
-    desc: "Click the FeedClear icon in your toolbar. All 5 categories are on by default — toggle any off.",
+    desc: "Click the ZenX icon in your toolbar. All 5 categories are on by default — toggle any off.",
   },
   {
     n: "03",

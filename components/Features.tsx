@@ -39,7 +39,7 @@ export function Features() {
       <div className="max-w-5xl mx-auto">
         <div className="mb-14">
           <p className="text-[11px] font-medium uppercase tracking-widest text-[#9ca3af] mb-3">
-            Why FeedClear
+            Why ZenX
           </p>
           <h2
             className="text-3xl md:text-4xl tracking-tight"
