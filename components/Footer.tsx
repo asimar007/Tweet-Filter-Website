@@ -22,7 +22,7 @@ export function Footer() {
           {[
             {
               label: "GitHub",
-              href: "https://github.com/asimar007/Tweet-Filter",
+              href: "https://github.com/asimar007/ZenX.git",
             },
             { label: "Privacy", href: "#" },
             { label: "Chrome Store", href: "#" },

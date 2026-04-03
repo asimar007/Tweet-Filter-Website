@@ -1,6 +1,6 @@
 # 🧘‍♂️ ZenX Website
 
-Welcome to the open-source repository for the **[ZenX](https://github.com/asimar007/GenX)** landing page. ZenX is a browser extension that makes your X (formerly Twitter) feed peaceful again by automatically hiding politics, hate speech, news, and controversy.
+Welcome to the open-source repository for the **[ZenX](https://github.com/asimar007/ZenX.git)** landing page. ZenX is a browser extension that makes your X (formerly Twitter) feed peaceful again by automatically hiding politics, hate speech, news, and controversy.
 
 This repository exclusively contains the code for the marketing website/landing page.
 

@@ -42,7 +42,7 @@ export function Hero() {
             className="px-6 py-3 h-auto text-[14px] rounded-xl border-[#e5e5e0] text-[#6b7280] hover:text-[#1a1a18] hover:bg-white gap-2"
           >
             <a
-              href="https://github.com/asimar007/Tweet-Filter"
+              href="https://github.com/asimar007/ZenX.git"
               target="_blank"
               rel="noopener noreferrer"
             >
